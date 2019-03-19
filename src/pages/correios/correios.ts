@@ -27,19 +27,17 @@ export class CorreiosPage {
   }
 
   listaEnderecos(){
-    if((this.txtEstado.length == 2) && 
-    (this.txtCidade.length >= 3) && 
-    (this.txtLogradouro.length >= 3))
+    if((this.txtEstado.length == 2) && (this.txtCidade.length >= 3) && (this.txtLogradouro.length >=3))
     this.cProvider.localizarEndereco(this.txtEstado, this.txtCidade, this.txtLogradouro).subscribe(
-      data=> {
+      data => {
         let resultado = (data as any)._body;
         let resultadoJson = JSON.parse(resultado);
         this.enderecos = resultadoJson;
       },
-      error=> {
+      error=>{
         console.log(error);
       }
-    );
+    )
   }
 
 }

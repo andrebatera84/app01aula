@@ -29,7 +29,7 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
     HttpModule
   ],
   bootstrap: [IonicApp],
