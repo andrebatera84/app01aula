@@ -12,6 +12,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SlidePage } from '../pages/slide/slide';
 import { ConfigProvider } from '../providers/config/config';
+import { CorreiosPage } from '../pages/correios/correios';
+import { CorreiosProvider } from '../providers/correios/correios';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { ConfigProvider } from '../providers/config/config';
     ContactPage,
     HomePage,
     TabsPage,
-    SlidePage
+    SlidePage,
+    CorreiosPage,
+
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp)
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -33,13 +39,15 @@ import { ConfigProvider } from '../providers/config/config';
     ContactPage,
     HomePage,
     TabsPage,
-    SlidePage
+    SlidePage,
+    CorreiosPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ConfigProvider
+    ConfigProvider,
+    CorreiosProvider
   ]
 })
 export class AppModule {}

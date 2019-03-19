@@ -1,34 +1,31 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>correios</ion-title>
+    <ion-title>Lista de CEPs</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-list>
 
-    <ion-list>
-
-        <ion-item>
-          <ion-label>Estado</ion-label>
-          <ion-input type="text" autofocus [(ngModel)]="txtEstado"></ion-input>
-        </ion-item>
-      
-        <ion-item>
-          <ion-label>Cidade</ion-label>
-          <ion-input type="text" autofocus [(ngModel)]="txtCidade"></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Logradouro</ion-label>
-            <ion-input type="text" autofocus [(ngModel)]="txtLogradouro"></ion-input>
-          </ion-item>
-      
-      </ion-list>
-      
-      <div padding>
-        <button ion-button color= "primary" block(click)="exibeInputs()">Localizar</button>
-      </div>
-
+    <ion-item>
+      <ion-label>Estado</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Cidade</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Logradouro</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+  
+  <div padding>
+    <button ion-button color="primary" block>Localizar</button>
+  </div>
 </ion-content>
-
